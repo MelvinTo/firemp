@@ -2,7 +2,7 @@
 
 ## Boards
 
-Board Model| Arch | Status
+Board Model| Arch(`uname -m`) | Status
 -|-|-
 NanoPi - NEO  | armv7l | fully
 NanoPi - NEO2 | aarch64 | kernel 4.16 with overlayroot/zram
