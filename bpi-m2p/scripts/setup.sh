@@ -19,6 +19,8 @@ install_pkgs() {
 patch_rootfs() {
     ( cd $BASEDIR/files/rootfs
     find . | cpio -pdmv /
+    # must update initramfs after above file changes
+    update-initramfs -u
     )
 }
 
