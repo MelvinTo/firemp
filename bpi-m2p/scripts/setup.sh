@@ -17,7 +17,9 @@ install_pkgs() {
 }
 
 patch_rootfs() {
-    cpio -pdmv $BASEDIR/files/rootfs /
+    ( cd $BASEDIR/files/rootfs
+    find . | cpio -pdmv /
+    )
 }
 
 # ----------------------------------------------------------------------------
